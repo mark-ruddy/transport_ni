@@ -13,4 +13,4 @@ def index(request):
     # return HttpResponse(template.render(context, request))
     return render(request, 'index.html', {
         'test_data': 'some test data'
-        })
+    })
