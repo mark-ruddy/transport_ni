@@ -14,3 +14,8 @@ def index(request):
     return render(request, 'index.html', {
         'test_data': 'some test data'
     })
+
+def contact(request):
+    return render(request, 'contact.html', {
+        'test_data': 'some test data'
+    })
