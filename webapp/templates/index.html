@@ -3,9 +3,11 @@
 {% block content %}
 
 <form action="", method="post">
-  <div>
+  <p></p>
+  <div class="container" >
     {% csrf_token %}
     {{ form }}
+    <p></p>
     <button type="submit" name="enter_postcode" class="btn btn-primary" title="Enter Postcode">Enter Postcode</button>
   </div>
 </form>
