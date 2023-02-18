@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 __pycache__/
+=======
+.vs/
+__pycache__/
+*.pyc
+>>>>>>> 9b7003057b36b7d6fea4485b5dc0c7108c879fd4

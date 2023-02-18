@@ -1,6 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Testing Template</h1>
-<p>Some data from the view: {{ test_data }}</p>
+
+<form action="", method="post">
+  <div>
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" name="enter_postcode" class="btn btn-primary" title="Enter Postcode">Enter Postcode</button>
+  </div>
+</form>
+
+{% if postcode_output %}
+  <h1>Postcode Output</h1>
+  <h3>{{ postcode_formatted }}</h3>
+{% endif %}
+
 {% endblock content %}
