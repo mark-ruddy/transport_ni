@@ -3,21 +3,27 @@ from django.shortcuts import render
 from core.api_interact import get_soa_of_postcode
 from .forms import PostCodeForm
 from .api_interact import *
+from .parse_csv import *
 
 # Create your views here.
 
 def index(request):
     form = PostCodeForm(request.POST)
     if form.is_valid():
-        soa = get_soa_of_postcode(form.cleaned_data['postcode'])
-        print(f"SOA: {soa}")
-
-        # TODO: parse CSV here with that soa
+        resp_json = query_postcode(form.cleaned_data['postcode'])
+        soa = get_soa_from_resp_json(resp_json)
+        soa_row = parse_soa_vacancies(soa)
+        soa_jobs = soa_row[1]
+        print(f"SOA: {soa_row}")
+        lon = get_lon_from_resp_json(resp_json)
+        print(f"Longitude: {lon}")
 
         return render(request, 'index.html', {
             'form': form,
             'postcode_output': True,
-            'postcode_formatted': "none",
+            'postcode': form.cleaned_data['postcode'],
+            'soa': soa,
+            'soa_jobs': soa_jobs,
         })
     else:
         form = PostCodeForm()

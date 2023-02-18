@@ -13,8 +13,12 @@
 </form>
 
 {% if postcode_output %}
-  <h1>Postcode Output</h1>
-  <h3>{{ postcode_formatted }}</h3>
+  <div class='container'>
+    <h1>Info on your postcode SOA</h1>
+    <h4>For postcode: {{ postcode }}</h4>
+    <h4>SOA(Super Output Area): {{ soa }}</h4>
+    <h4>SOA Availabe Job Vacancies: {{ soa_jobs }}</h4>
+  </div>
 {% endif %}
 
 {% endblock content %}

@@ -19,3 +19,7 @@ def get_soa_of_postcode(postcode):
 def get_soa_from_resp_json(resp_json):
     res = resp_json['result']
     return res['lsoa']
+
+def get_lon_from_resp_json(resp_json):
+    res = resp_json['result']
+    return res['longitude']
