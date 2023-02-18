@@ -1,0 +1,130 @@
+﻿{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <!--
+    <header class="header">
+        <h1 class="head"> About Us </h1>
+        <div class="searchHold">
+            <a href="index.html" class="search">Home!</a>
+        </div>
+    </header>
+    -->
+
+    <div class="whitespace"> </div>
+
+    <div class="row">
+        <div class="column1">
+            <h2 class="allign_h2">Our aim</h2>
+
+            <p class="allign_h2"> Our aim is to provide a platform to allow the People of Northern Ireland: </p>
+            <ul typeof="circle">
+                <li>Track Buses close to their location</li>
+                <li>Track Bus Times</li>
+                <li>Track Bus Times </li>
+            </ul>
+        </div>
+
+        <div class="column2">
+            <h2 class="allign_h2">Location!!!</h2>
+
+            <p class="allign_h2"> We're are based in Northern Ireland </p>
+        </div>
+
+        <div class="column3">
+            <h2 class="allign_h2"> Buses, Buses, Buses</h2>
+            <p class="allign_h2">Both Translink and Priavte Buses will be able to be displayed on our services. </p>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="whitespace"> </div>
+
+<!--
+<div class="footer">
+    <div class="searchHold">
+        <a href="index.html" class="search">Home!</a>
+    </div>
+</div>
+-->
+
+<style>
+    .footer {
+        background-color: dimgrey;
+        padding-bottom: 18%;
+        color: white;
+        font-weight: bold;
+        font-family: Helvetica;
+    }
+
+    .searchHold {
+        background-color: grey;
+        height: 30%;
+    }
+
+    .header {
+        background-color: dimgrey;
+        padding-bottom: 2%;
+        color: white;
+        font-weight: bold;
+        font-family: Helvetica;
+    }
+
+    .row {
+        background-color: cornsilk;
+    }
+
+    .allign_h2 {
+        text-align: center;
+    }
+
+    .search {
+        padding-left: 25%;
+        padding-top: 2%;
+        color: white;
+        text-decoration: none;
+    }
+
+    .head {
+        padding-top: 2%;
+        text-align: center;
+    }
+
+    .whitespace {
+        padding-top: 2%
+    }
+
+    .column1 {
+        float: left;
+        align-content: center;
+        width: 30%;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .column2 {
+        float: left;
+        width: 30%;
+        align-content: center;
+        padding-right: 2%;
+        padding-left: 2%;
+    }
+
+    .column3 {
+        float: left;
+        width: 25%;
+        align-content: center;
+        padding-right: 2%;
+        padding-left: 2%;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+</style>
+
+{% endblock content %}

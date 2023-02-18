@@ -22,6 +22,7 @@ def index(request):
     })
 
 def contact(request):
-    return render(request, 'contact.html', {
-        'test_data': 'some test data'
-    })
+    return render(request, 'contact.html', {})
+
+def about_us(request):
+    return render(request, 'about_us.html', {})
