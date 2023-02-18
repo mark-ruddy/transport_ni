@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .postcode import Postcode
 from .forms import PostCodeForm
 
 # Create your views here.
@@ -6,12 +7,16 @@ from .forms import PostCodeForm
 def index(request):
     form = PostCodeForm(request.POST)
     if form.is_valid():
-        pass
-        # TODO: process the address and display result back to user
+        postcode = Postcode()
+        postcode.format_postcode(form.cleaned_data['postcode'])
+        return render(request, 'index.html', {
+            'form': form,
+            'postcode_output': True,
+            'postcode_district': postcode.formatted_postcode,
+        })
     else:
         form = PostCodeForm()
 
     return render(request, 'index.html', {
         'form': form,
-        'test_data': 'some test data'
     })

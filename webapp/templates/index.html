@@ -2,8 +2,18 @@
 
 
 {% block content %}
-<div>
-  {{ form }}
-  <button type="submit" name="verify" class="btn btn-success" title="Verify contract matches on-chain bytecode without submitting to list">Verify</button>
-</div>
+
+<form action="", method="post">
+  <div>
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" name="enter_postcode" class="btn btn-primary" title="Enter Postcode">Enter Postcode</button>
+  </div>
+</form>
+
+{% if postcode_output %}
+  <h1>Postcode Output</h1>
+  <h3>{{ postcode_district }}</h3>
+{% endif %}
+
 {% endblock content %}
