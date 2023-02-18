@@ -12,7 +12,7 @@ def index(request):
         return render(request, 'index.html', {
             'form': form,
             'postcode_output': True,
-            'postcode_district': postcode.formatted_postcode,
+            'postcode_formatted': postcode.formatted_postcode,
         })
     else:
         form = PostCodeForm()
