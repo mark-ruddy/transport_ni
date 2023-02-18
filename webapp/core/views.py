@@ -1,6 +1,5 @@
 from django.shortcuts import render
 
-from core.api_interact import get_soa_of_postcode
 from .forms import PostCodeForm
 from .api_interact import *
 from .parse_csv import *
