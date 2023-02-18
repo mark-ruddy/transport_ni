@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
+
 {% block content %}
-<h1>Testing Template</h1>
-<p>Some data from the view: {{ test_data }}</p>
+<div>
+  {{ form }}
+  <button type="submit" name="verify" class="btn btn-success" title="Verify contract matches on-chain bytecode without submitting to list">Verify</button>
+</div>
 {% endblock content %}
